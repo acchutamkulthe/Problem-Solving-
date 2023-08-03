@@ -14,10 +14,31 @@ public class ProblemStatement4 {
         Arrays.stream(output).forEach(System.out::println);
     }
 
+    public static void optimizedRearrange(int nums[], int [] pos){
+        int i=0 , temp=0,temp2 , count=0 ;
+        while(count< pos.length) {
+            if(count==0) {
+                i = pos[i];
+                temp = nums[i];
+                nums[i] = nums[0];
+                count++;
+            }
+            else {
+                i=pos[i];
+                temp2=nums[i];
+                nums[i]=temp;
+                temp=temp2;
+                count++;
+            }
+        }
+        Arrays.stream(nums).forEach(System.out::println);
+
+    }
+
     public static void main(String[] args) {
         int[] nums = { 1, 2, 3, 4, 5 };
         int[] pos = { 3, 2, 4, 1, 0 };
-        rearrange(nums,pos);
+        optimizedRearrange(nums,pos);
     }
 }
 /*Given an array of distinct integers, shuffle it according to the given order of elements.
