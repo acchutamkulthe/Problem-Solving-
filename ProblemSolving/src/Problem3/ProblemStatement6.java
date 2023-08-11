@@ -14,7 +14,7 @@ public class ProblemStatement6 {
         System.out.println(count);
     }
     public static void main(String[] args) {
-        divisible(12);
+        divisible(23);
     }
 }
 /*Given a number N. Count the number of digits in N which evenly divides N.
