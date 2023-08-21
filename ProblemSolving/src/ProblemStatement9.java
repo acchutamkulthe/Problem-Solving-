@@ -1,0 +1,2 @@
+public class ProblemStatement9 {
+}
