@@ -2,10 +2,11 @@ public class ProblemStatement9 {
 
     public static int findClosest(int n , int m){
         int rem = n%m;
-        return n<0 && (Math.abs(n)-Math.abs(n%m)+m-Math.abs(n)==Math.abs(n%m)) ? n+rem :  (((n - (n%m) + m) - n) < n%m) ? n-(n%m)+m : n-n%m;
+        return n<0 && (Math.abs(n)-Math.abs(n%m)+m-Math.abs(n)==Math.abs(n%m)) ? n+rem :  ((( m- (n%m))) < n%m) ? n-(n%m)+m : n-n%m;
     }
+
     public static void main(String[] args) {
-        System.out.println(findClosest(13,6));
+        System.out.println(findClosest(-15,4));
     }
 }
 /*

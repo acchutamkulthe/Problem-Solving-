@@ -4,8 +4,10 @@ public class Palindrome {
         int max=0;
         for (int i = 0; i < str.length(); i++) {
             for (int j = i+1; j < str.length(); j++) {
-                if(isPalindrome(str.substring(i,j)) && max< str.substring(i,j).length()) {
-                    max = str.substring(i, j).length();
+                String test = str.substring(i,j);
+                if(isPalindrome(str.substring(i,j)) && max< str.substring(i,j+1).length()) {
+                    System.out.println(str.substring(i,j+1));
+                    max = str.substring(i, j+1).length();
                     }
                 }
             }
